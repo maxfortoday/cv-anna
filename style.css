@@ -118,19 +118,24 @@ a .fab {
   list-style-type: none;
 }
 
-.skills .column ul > li:before {
-  content: "►";
-  padding-right: 0.5em;
+.skills .column ul > li:after {
+  content: "◄";
+  padding-left: 0.5em;
   color: #509e98;
+  font-size: 20px;
 }
 
 .school, .job-title {
   text-transform: capitalize;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
 }
 
 .school span, .job-title span {
   color: #889499;
   text-decoration: underline;
+  padding-left: 10px;
 }
 
 ul.job-description li:before{
@@ -143,7 +148,36 @@ footer {
  padding: 1em 1.5em;
  background: #A7B8BF;
  color: white;
- text-align: right;
+ text-align: left;
+}
+
+
+.course, .skills {
+  flex-direction: row-reverse;
+}
+
+.course .title {
+  text-align: right;
+}
+
+.course .descrition {
+  text-align: right;
+}
+
+h3, h4 {
+  text-align: right;
+}
+
+.skills .column ul, ul.job-description {
+  text-align: right;
+}
+
+.school, .job-title {
+  text-align: right;
+}
+
+.langueges{
+  text-align: right;
 }
 
 @media only screen and (max-width: 768px) {
